@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+body{
+    margin: 0px;
+    font-family: Roboto;
+    background-color: #f8f5f5;
+}
+img{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    pointer-events: none;    
+}
+h1{
+    text-align: center;
+    font-family: Shrikhand;
+}
+h2{
+    font-weight: normal;
+}
+h3{
+    font-size: medium;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+h4{
+    font-size: small;
+    font-weight: normal;
+    
+}
+header{
+    margin: 0px;
+    background-color: white;
+}
+header h1{
+    padding: 0px;
+    margin: 0px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -50px;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: #f8f5f5;
+    margin: 0px;
+    padding: 15px;
+
+}
+section h1{
+    align-self: flex-start;
+}
+section h2{
+    align-self: flex-start;
+}
+aside{
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 70px;
+    text-align:left; 
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    animation: begin_animation 1000ms;
+}
+aside *{
+    margin: 0px;
+
+}
+.info_plat h3{
+    height: 20px;
+    margin: 0px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info_plat{ 
+    margin: 15px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 1s;
+}
+aside div div{
+    height: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+aside div div h4{
+    max-width: 80%;
+    height: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+aside p{
+    align-self: flex-end;
+    font-weight: bold;
+    font-size: medium;
+}
+footer{
+    margin: 0px;
+    background-color: #282626;
+    color: #EFEBEB;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+footer *{
+    margin: 15px;
+}
+footer i {
+    margin: 0px;
+    margin-right: 8px;
+}
+footer h1{
+    font-size: larger;
+    font-weight: normal;
+    text-align: left;
+
+}
+
+.valide{
+    position: absolute;
+    left: -9000px;
+    display: flex;
+    width: 0px;;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.valide i{
+    opacity: 0;
+    color: white;
+    transition-delay: 0.3s;
+}
+aside:hover .info_plat{
+    width: 60%;
+}
+aside:hover .valide{
+    position: static;
+    background-color: #99E2D0;
+    transition-duration: 500ms;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    flex: 3;
+}
+aside:hover .valide i {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transform: rotate(360deg);
+  }
+
+
+  @keyframes begin_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+  
