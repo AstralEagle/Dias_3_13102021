@@ -35,8 +35,19 @@ header{
     background-color: white;
 }
 header h1{
-    padding: 0px;
+    padding: 10px;
+    padding-top: 15px;
     margin: 0px;
+}
+section div span .fas{
+    color: red;
+    opacity: 0;
+}
+section div span:hover .far{
+    opacity: 0;
+}
+section div span:hover .fas{
+    opacity: 1;
 }
 section{
     display: flex;
@@ -44,12 +55,18 @@ section{
     position: relative;
     top: -50px;
     align-items: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
     background-color: #f8f5f5;
     margin: 0px;
     padding: 15px;
 
+}
+.contenair_disteint{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 section h1{
     align-self: flex-start;
@@ -89,14 +106,15 @@ aside *{
     transition: all 1s;
 }
 aside div div{
-    height: 12px;
+    height: 17px;
 
     display: flex;
     justify-content: space-between;
 }
 aside div div h4{
+    display: flex;
+    flex-direction: column;
     max-width: 80%;
-    height: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -143,7 +161,7 @@ footer h1{
     transition-delay: 0.3s;
 }
 aside:hover .info_plat{
-    width: 60%;
+    width: 70%;
 }
 aside:hover .valide{
     position: static;
@@ -157,17 +175,35 @@ aside:hover .valide i {
     opacity: 1;
     transition-duration: 0.5s;
     transform: rotate(360deg);
-  }
+}
 
 
-  @keyframes begin_animation {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-  }
+#but_command{
+    font-size: x-large;
+    color: white;
+    background-color: #FF79DA ;
+    padding: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 15px;
+    margin-top: 30px;
+    border-radius: 50px;
+}
+#btn_back{
+    position: absolute;
+    top: 25px;
+    left: 8px;
+    color: black;
+}
+
+@keyframes begin_animation {
+0% {
+    opacity: 0;
+    transform: translateY(40px);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
   

@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/15d982b360.js" crossorigin="anonymous"></script>
-    <title>HoMyFood</title>
+    <title>OhMyFood</title>
 </head>
 <body>
+    <div id="load_screen">
+        <h4>ohmyfood</h4>
+        <div>
+            <div class="load_chargement"></div>
+            <div class="load_chargement"></div>
+            <div class="load_chargement"></div>
+        </div>
+    </div>
     <header>
-        <img src="img/logo.svg" alt="logo">
+        <h4>ohmyfood</h4>
         <h2>
             <i class="fas fa-map-marker-alt"></i></script>
             Paris, Belleville
@@ -56,7 +64,7 @@
     </section>
     <section id="restau_setion">
         <h1>Restaurants</h1>
-        <a href="lapalette.html">
+        <a href="restau_01.html">
             <aside>
                 <img src="img/img_01.jpg" alt="restaurant">
                 <div>
@@ -64,8 +72,10 @@
                         <h2>Lapalette du goût</h2>
                         <p>Ménilmontant</p>
                     </div>
-                    <i class="far fa-heart fa-lg"></i>
-                </div>
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-heart fa-stack-1x liked"></i>
+                        <i class="far fa-heart fa-stack-1x"></i>
+                    </span>                </div>
             </aside>
         </a>
         <aside>
@@ -75,7 +85,10 @@
                     <h2>La note enchanté</h2>
                     <p>Charonne</p>
                 </div>
-                <i class="far fa-heart fa-lg"></i>
+                <span class="fa-stack fa-lg">
+                    <i class="fas fa-heart fa-stack-1x liked"></i>
+                    <i class="far fa-heart fa-stack-1x"></i>
+                </span>
             </div>
         </aside>
         <aside>
@@ -85,8 +98,10 @@
                     <h2>À la française</h2>
                     <p>Cité Rouge</p>
                 </div>
-                <i class="far fa-heart fa-lg"></i>
-            </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fas fa-heart fa-stack-1x liked"></i>
+                    <i class="far fa-heart fa-stack-1x"></i>
+                </span>            </div>
         </aside>
         <aside>
             <img src="img/img_04.jpg" alt="restaurant">
@@ -95,8 +110,10 @@
                     <h2>Le délice des sens</h2>
                     <p>Folie-Méricourt</p>
                 </div>
-                <i class="far fa-heart fa-lg"></i>
-            </div>
+                <span class="fa-stack fa-lg">
+                    <i class="fas fa-heart fa-stack-1x liked"></i>
+                    <i class="far fa-heart fa-stack-1x"></i>
+                </span>            </div>
         </aside>
     </section>
     <footer>
