@@ -16,38 +16,32 @@ img{
 h1{
     text-align: center;
     font-family: Shrikhand;
+    padding: 10px;
+    padding-top: 15px;
+    margin: 0px;
 }
 h2{
-    font-weight: normal;
+    font-family: Shrikhand;
 }
 h3{
-    font-size: medium;
+    font-weight: normal;
+}
+h4{
+    font-size: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-h4{
+h5{
     font-size: small;
     font-weight: normal;
-    
 }
 header{
     margin: 0px;
     background-color: white;
 }
-header h1{
-    padding: 10px;
-    padding-top: 15px;
-    margin: 0px;
-}
 section div span .fas{
     color: red;
     opacity: 0;
-}
-section div span:hover .far{
-    opacity: 0;
-}
-section div span:hover .fas{
-    opacity: 1;
 }
 section{
     display: flex;
@@ -60,7 +54,6 @@ section{
     background-color: #f8f5f5;
     margin: 0px;
     padding: 15px;
-
 }
 .contenair_disteint{
     width: 100%;
@@ -68,20 +61,21 @@ section{
     justify-content: space-between;
     align-items: center;
 }
-section h1{
-    align-self: flex-start;
-}
 section h2{
+    font-size: x-large;
+}
+section h3{
     align-self: flex-start;
 }
 aside{
     position: relative;
     display: flex;
-    width: 80%;
+    width: 100%;
     height: 70px;
     text-align:left; 
     background-color: white;
     border-radius: 15px;
+    margin: 0px;
     margin-top: 0px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -89,32 +83,32 @@ aside{
 }
 aside *{
     margin: 0px;
-
 }
-.info_plat h3{
+.info_plat h4{
     height: 20px;
     margin: 0px;
     margin-bottom: 2px;
+    white-space: nowrap;
+    flex-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .info_plat{ 
     margin: 15px;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
     transition: all 1s;
 }
 aside div div{
     height: 17px;
-
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
 }
-aside div div h4{
-    display: flex;
-    flex-direction: column;
+aside div div h5{
+    height: 17px;
     max-width: 80%;
+    white-space: nowrap;
+    justify-content: space-between;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -139,13 +133,12 @@ footer i {
     margin: 0px;
     margin-right: 8px;
 }
-footer h1{
+footer h2{
     font-size: larger;
     font-weight: normal;
     text-align: left;
 
 }
-
 .valide{
     position: absolute;
     left: -9000px;
@@ -160,24 +153,6 @@ footer h1{
     color: white;
     transition-delay: 0.3s;
 }
-aside:hover .info_plat{
-    width: 70%;
-}
-aside:hover .valide{
-    position: static;
-    background-color: #99E2D0;
-    transition-duration: 500ms;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    flex: 3;
-}
-aside:hover .valide i {
-    opacity: 1;
-    transition-duration: 0.5s;
-    transform: rotate(360deg);
-}
-
-
 #but_command{
     font-size: x-large;
     color: white;
@@ -195,15 +170,98 @@ aside:hover .valide i {
     left: 8px;
     color: black;
 }
+.list_menu{
+    width: 100%;
+}
 
-@keyframes begin_animation {
-0% {
+/* Animation */
+
+section div span:hover .far{
     opacity: 0;
-    transform: translateY(40px);
 }
-100% {
+aside:hover .valide{
+    position: static;
+    background-color: #99E2D0;
+    transition-duration: 500ms;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    flex: 3;
+}
+section div span:hover .fas{
     opacity: 1;
-    transform: translateY(0px);
+    animation: on_like 1000ms;
 }
+aside:hover .info_plat{
+    width: 70%;
 }
-  
+aside:hover .valide i {
+    opacity: 1;
+    transition-duration: 0.5s;
+    transform: rotate(360deg);
+}
+@keyframes begin_animation {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes on_like{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* Responsiv */
+@media(min-width: 1026px){
+    img{
+        height: 750px;
+        object-fit: cover;
+
+    }
+    .list_menu{
+        display: flex;
+        width: 100%;
+    }
+    .list_plat{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 25px;
+    }
+}
+@media(min-width: 1441px){
+    aside{
+        height: 100px;
+        margin: 10px;
+    }
+    h1{
+        font-size: 75px;
+    }
+    section h2{
+        font-size: 55px;
+    }
+    h3{
+        font-size: 45px;
+    }
+    p{
+        font-size: 20px;
+    }
+    .info_plat h4{
+        font-size: 25px;
+        height: 30px;
+    }
+    aside div div h5{
+        font-size: 20px;
+        height: 21px;
+    }
+    aside:hover .info_plat{
+        width: 85%;
+    }
+}
