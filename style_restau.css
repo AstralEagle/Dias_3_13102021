@@ -27,7 +27,6 @@ h3{
     font-weight: normal;
 }
 h4{
-    font-size: normal;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -137,7 +136,10 @@ footer h2{
     font-size: larger;
     font-weight: normal;
     text-align: left;
-
+}
+footer a{
+    margin: 0px;
+    color: white;
 }
 .valide{
     position: absolute;
@@ -163,6 +165,10 @@ footer h2{
     margin: 15px;
     margin-top: 30px;
     border-radius: 50px;
+}
+#but_command:hover{
+    background-color: #fc97df ;
+
 }
 #btn_back{
     position: absolute;
