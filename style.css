@@ -33,11 +33,11 @@ h4{
 header{
     width: 100%;
     margin-bottom: 0px;
-    padding-top: 15px;
 }
 header h4{
     font-size: 45px;
-    margin: 10px;
+    padding: 10px;
+    margin: 0px;
 }
 header h2{
     margin: 0px;
@@ -63,20 +63,43 @@ nav h3{
 nav a{
     font-size: x-large;
     color: white;
-    background-color: #FF79DA ;
+    background-image: linear-gradient(174deg, #FF79DA 0%, #9356DC 90%);
     padding: 15px;
     padding-right: 25px;
     padding-left: 25px;
     border-radius: 50px;
+    box-shadow: 5px 5px 15px black;
+}
+nav a:hover{
+    background-image: linear-gradient(174deg, #fa96de 0%, #9c69da 90%);
+    box-shadow: 5px 5px 25px black;
 }
 strong{
     color: white;
 }
 
 aside{
+    position: relative;
+    flex-direction: column;
     margin: 10%;
     border-radius: 15px;
     background-color: white;
+    box-shadow: 1px 1px 15px black;
+}
+aside:hover{
+    box-shadow: 5px 5px 15px black;
+}
+aside .new_restau{
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #99E2D0;
+    color: #217460;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
 }
 aside img{
     width: 100%;
@@ -98,7 +121,9 @@ aside div span{
     margin: 15px;
 }
 aside div span .fas{
-    color: red;
+    background: linear-gradient(to bottom, #9356DC 10%, #FF79DA 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     opacity: 0;
 }
 aside div span:hover .far{
@@ -264,6 +289,7 @@ footer a{
         }
     }
 
+/* Resposiv */
 @media(min-width: 1120px){
     .list_restau{
         display: flex;
