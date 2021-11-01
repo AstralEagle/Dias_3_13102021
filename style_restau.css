@@ -78,10 +78,22 @@ aside{
     margin-top: 0px;
     margin-bottom: 10px;
     cursor: pointer;
-    animation: begin_animation 1000ms;
 }
 aside *{
     margin: 0px;
+    animation: on_begin 100ms;
+}
+aside:nth-child(2){
+    animation: begin_animation1 500ms;
+}
+aside:nth-child(3){
+    animation: begin_animation2 1000ms;
+}
+aside:nth-child(4){
+    animation: begin_animation3 1500ms;
+}
+aside:nth-child(5){
+    animation: begin_animation4 2000ms;
 }
 .info_plat h4{
     height: 20px;
@@ -207,7 +219,7 @@ aside:hover .valide i {
     transition-duration: 0.5s;
     transform: rotate(360deg);
 }
-@keyframes begin_animation {
+@keyframes begin_animation1 {
     0% {
         opacity: 0;
         transform: translateY(40px);
@@ -217,6 +229,60 @@ aside:hover .valide i {
         transform: translateY(0px);
     }
 }
+@keyframes begin_animation1 {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+@keyframes begin_animation2 {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    10% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes begin_animation3 {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes begin_animation4 {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    30% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 @keyframes on_like{
     0%{
         opacity: 0;
